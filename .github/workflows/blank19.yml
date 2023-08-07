@@ -21,6 +21,7 @@ jobs:
       run: |
         sudo apt update
         sudo apt install python3-pip
+        sudo apt install cpio
         pip3 install wget
         pip3 install twrpdtgen
         mkdir dt
