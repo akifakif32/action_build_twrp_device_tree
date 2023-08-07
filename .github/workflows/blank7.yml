@@ -20,7 +20,11 @@ jobs:
     - name: Prepare the environment
       run: |
         sudo apt update
-        sudo apt-get install python3-pip
+        apt-get install curl
+
+        curl https://bootstrap.pypa.io/pip/3.9/get-pip.py -o get-pip.py
+
+        python get-pip.py
         sudo apt -y install python python3 python-pip python3-pip cpio wget
         pip3 install twrpdtgen
         mkdir dt
