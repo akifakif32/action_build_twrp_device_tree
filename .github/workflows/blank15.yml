@@ -19,9 +19,10 @@ jobs:
       
     - name: Prepare the environment
       run: |
-        sudo apt upgrade
+        sudo apt update
+        sudo apt install python3-pip
         sudo apt -y install python python3 python-pip python3-pip cpio wget
-        pip install twrpdtgen
+        pip3 install twrpdtgen
         mkdir dt
       
     - name: Download boot or recovery img
